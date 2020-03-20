@@ -2,6 +2,7 @@
   <div id="app">
     <HelloWorld msg="Michael Scimeca-staging"/>
     <p>Learning</p>
+    <p>Merge</p>
   </div>
 </template>
 
