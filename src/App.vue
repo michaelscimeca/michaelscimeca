@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <HelloWorld msg="Michael Scimeca-staging"/>
+    <p>Learning</p>
   </div>
 </template>
 
