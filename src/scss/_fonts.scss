@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'Plain-Bold';
+  src: url('./fonts/Plain-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Plain-light';
+  src: url('./fonts/Plain-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
 @mixin plainbold {
   font-family: "Plain-Bold", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-style: normal;
 }
 
