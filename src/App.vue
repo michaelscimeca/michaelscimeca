@@ -1,10 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div id="app">
-    <HelloWorld msg="Michael Scimeca-staging"/>
-    <p>Learning</p>
-    <p>Merge</p>
-=======
   <div id="app" :class="{ 'no-touchevents': touchable }">
     <div class="row align-center">
       <div class="small-12 column">
@@ -12,7 +6,6 @@
       </div>
     </div>
     <router-view/>
->>>>>>> master
   </div>
 </template>
 <script>
