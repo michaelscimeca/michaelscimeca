@@ -1,29 +1,40 @@
 <template>
+<<<<<<< HEAD
   <div id="app">
     <HelloWorld msg="Michael Scimeca-staging"/>
     <p>Learning</p>
     <p>Merge</p>
+=======
+  <div id="app" :class="{ 'no-touchevents': touchable }">
+    <div class="row align-center">
+      <div class="small-12 column">
+        <div id="logo" :style="{'background-image': 'url(' + require('./assets/logo.svg') + ')'}"></div>
+      </div>
+    </div>
+    <router-view/>
+>>>>>>> master
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
+  computed: {
+    touchable: function() {
+      return !(('ontouchstart' in window) || window.DocumentTouch)
+    }
+  },
   components: {
-    HelloWorld
+  },
+  data () {
+    return {
+    }
+  },
+  mounted: function () {
+  },
+  methods: {
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="../public/css/app.css" lang="css"></style>
