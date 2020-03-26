@@ -1,0 +1,11 @@
+@mixin plainbold {
+  font-family: "Plain-Bold", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin plainlight {
+  font-family: "Plain-light", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}

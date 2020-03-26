@@ -1,0 +1,102 @@
+#home {
+  #headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    white-space: nowrap;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    &.activate {
+      div {
+        opacity: 1;
+        transform: translateY(0px);
+        span {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+
+    div {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: transform 300ms cubic-bezier(.42, 0, .58, 1), opacity 500ms cubic-bezier(.42, 0, .58, 1);
+
+      span {
+        display: inline-block;
+        color: #fff;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: transform 300ms cubic-bezier(.42, 0, .58, 1), opacity 500ms cubic-bezier(.42, 0, .58, 1);
+      }
+    }
+  }
+
+
+  @for $i from 1 through 113 {
+    h1 div {
+      span:nth-child(#{$i}) {
+        transition-delay: $i * 0.05s;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: em(16);
+    font-weight: 500;
+    line-height: 0.8;
+    @include breakpoint(768) {
+      font-size: 3vw;
+      line-height: 1.2;
+    }
+    @include breakpoint(1200) {
+      font-size: em(24);
+    }
+  }
+}
+
+#linkdin-container {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  background-color: rgba(0, 102, 255, 0.75);
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  transition: background-color 350ms ease-in, transform 500ms ease-in;
+
+  @include hover {
+    background-color: #06f;
+    transform: scale(1.1);
+  }
+
+  .linkdin-logo {
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+a {
+  font-size: em(23, 23);
+  line-height: 31px;
+  margin-bottom: 0;
+  font-weight: 500;
+  transition: color 150ms ease-in;
+
+  @include hover {
+    color: #06f;
+  }
+}
+
+#cta {
+  margin-top: 20px;
+}
